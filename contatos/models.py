@@ -29,14 +29,16 @@ class Categoria(models.Model): # classe categoria de telefones
     
 
 
-#classe contato que herda de models para criacao dos modelos 
+#classe contato que herda de models para criacao dos modelos de dados
 class Contato(models.Model):
     nome = models.CharField(max_length=255)
-    sobrenome = models.CharField(max_length=255, blank=True)
+    sobrenome = models.CharField(max_length=255, blank=True) # sobrenome é opcional
     telefone = models.CharField(max_length=255)
     email = models.CharField(max_length=255, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now)
     descricao = models.TextField(blank=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)# relação entre as tabelas
+    categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)# relação entre as tabelas categoria e contato
     
     
+    def __str__(self) -> str:
+        return self.nome
