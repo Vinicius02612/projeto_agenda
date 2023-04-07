@@ -5,26 +5,24 @@
     <table class="table">
     <thead>
         <tr>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Telefone</th>
-        <th>Categoria</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Telefone</th>
+            <th>Categoria</th>
         </tr>
     </thead>
     <tbody>
         <!-- Percorre a chave do dicionário de contatos -->
         {% for contato in cont %} 
-            {% if contato.mostrar%} <!-- Mostrar somente os valores que estão com o campo mostrar marcado como True -->
                 <tr>
+                    
                     <td>
                         <a href="{% url 'ver_contato' contato.id %}">{{contato.nome}}</a>
                     </td>
                     <td>{{contato.sobrenome}}</td>
                     <td>{{contato.telefone}}</td>
                     <td>{{contato.categoria}}</td>
-                </tr>
-            {% endif%}
-           
+                </tr>           
         {% endfor %}
 
     </tbody>

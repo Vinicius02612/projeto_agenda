@@ -1,0 +1,30 @@
+{%  extends 'base.html'%}
+
+
+{% block conteudo%}
+{% if messages %}
+<br><br><br>
+  {% for message in messages %}
+    
+    <div class="alert {{ message.tags }} " role="alert">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+
+<h1>Ola {{user.first_name}} {{user.last_name}} </h1>
+
+<div class="container">
+    <form action="{% url 'dashboard'%}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+            
+            {{form }}
+            <tr>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </td>
+            </tr>
+        </table>
+    </form> 
+</div>
+
+{% endblock %}
