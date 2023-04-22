@@ -30,7 +30,7 @@ def index(request):
 
 def ver_contato(request, id_contato):
     """
-        Metodo que pega um um contato da tabela contato pelo id 
+        Metodo que pega  um contato da tabela contato pelo id 
         
         Contato.objects.get(id = id_contato) pega apenas um dado, nesse caso o id da contato
     """

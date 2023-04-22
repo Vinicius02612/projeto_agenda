@@ -23,10 +23,12 @@
         <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-primary">Entrar</button>
+
+      <a href="{% url 'cadastro' %}">Não tenho conta</a>
   </form>
 
 {% else %}
- <a href="{% url 'logout'%}">Sair</a>
+ <a class="ml-10" href="{% url 'logout'%}">Sair</a>
 
 {% endif %}
 {% endblock %}
