@@ -36,3 +36,12 @@ e o framwork <a href="https://www.djangoproject.com/">Django</a>;
 4 - Por fim rode o camando:
 
     python3 manage.py runserver
+
+
+5 -  Tecnologias usadas no projeto:
+
+<a href="https://www.python.org/">Python</a><br>
+<a href="https://www.djangoproject.com/">Django</a><br>
+<a href="https://www.djangoproject.com/">HTML5</a><br>
+<a href="https://www.djangoproject.com/">CSS</a><br>
+<a href="https://www.djangoproject.com/">Bootstrap4</a><br>
