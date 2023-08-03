@@ -1,0 +1,55 @@
+{%  extends 'base.html'%}
+
+
+{% block conteudo%}
+<h1>Cadastro</h1>
+
+<hr>
+
+<form  method="post" action="{% url 'cadastro' %}">
+    {% if messages %}
+    <br><br><br>
+      {% for message in messages %}
+        
+        <div class="alert {{ message.tags }} " role="alert">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Nome</label>
+            <input type="text" class="form-control" name="nome" value="{{request.POST.nome}}"  placeholder="Enter email">
+        </div>
+    
+        <div class="form-group col-md-6">
+            <label>Sobre Nome</label>
+            <input type="text" class="form-control" name="sobrenome" value="{{request.POST.sobrenome}}" placeholder="sousa">
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label >Usuario</label>
+        <input type="text" class="form-control" name="usuario" value="{{request.POST.usuario}}"  placeholder="sessa">
+    </div>
+       
+    <div class="form-group">
+      <label >Email address</label>
+      <input type="email" class="form-control" name="email" value="{{request.POST.email}}" placeholder="Enter email">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label >Senha</label>
+            <input type="password" class="form-control" name="senha" value="{{request.POST.senha}}"placeholder="Enter email">
+        </div>
+    
+        <div class="form-group col-md-6">
+            <label >Repetir a senha</label>
+            <input type="password" class="form-control" name="retrysenha"value="{{request.POST.retrysenha}}" placeholder="Enter email">
+        </div>
+    </div>
+   
+   
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+  
+{% endblock %}
