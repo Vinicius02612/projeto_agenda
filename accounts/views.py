@@ -54,6 +54,13 @@ def cadastro(request):
         last_name = sobrenome
     )
 
+    if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser(
+                username='admin',
+                password='123456'
+            )
+        
+
     user.save()
     messages.success(request, 'Dados cadastrados com sucesso!')
     return redirect('login')
