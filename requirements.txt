@@ -1,6 +1,7 @@
 charset-normalizer==2.0.4
 Click==7.0
 colorama==0.4.3
+django-crispy-forms>=1.14.0
 crispy-bootstrap4==2022.1
 cryptography==39.0.0
 Django==3.2.5
