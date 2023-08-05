@@ -6,7 +6,6 @@ django-crispy-forms==1.14.0
 cryptography==39.0.0
 Django==3.2.5
 django-allauth==0.45.0
-django-bootstrap4==3.0.10
 django-dotenv==1.4.2
 django-environ==0.4.5
 django-extensions==3.2.1
